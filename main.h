@@ -13,4 +13,4 @@ int put_int(int integer);
 int _puts(char *string);
 void get_int(int num);
 
-#endif 
+#endif
