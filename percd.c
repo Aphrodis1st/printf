@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main void get_int(int num)
+void get_int(int num)
 {
 	int n;
 
@@ -12,5 +12,5 @@ int main void get_int(int num)
 	get_int(n);
 	print_char(num % 10 + '0');
 
-	return (n);
+	return;
 }
