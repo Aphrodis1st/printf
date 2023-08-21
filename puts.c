@@ -1,8 +1,8 @@
 #include "main.h"
 
-int main putx(char *string)
+int putx(char *string)
 {
-	int idx = 0, val = 0;
+	int idx = 0, char_val = 0;
 
 	if (string)
 	{
