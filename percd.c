@@ -1,6 +1,6 @@
 #include "main.h"
 
-void get_int(int num)
+int main void get_int(int num)
 {
 	int n;
 

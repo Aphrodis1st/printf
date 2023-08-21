@@ -5,14 +5,13 @@
  * @format: format.
  * Return: Printed chars.
  */
-
-
 int _printf(const char *format, ...)
-
 {
 	unsigned int h = 0, value = 0;
 	va_list aphro;
+
 	va_start(aphro, format);
+
 	if (format == NULL)
 	{
 		return (-1);
@@ -48,5 +47,4 @@ int _printf(const char *format, ...)
 		value += 1;
 	}
 	return (value);
-
 }

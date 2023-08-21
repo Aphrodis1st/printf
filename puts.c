@@ -1,19 +1,18 @@
 #include "main.h"
 
-int putx(char *str)
-
+int main putx(char *string)
 {
 	int idx = 0, val = 0;
 
-	if (str)
+	if (string)
 	{
-		while(str[idx] != '\0')
+		while (string[idx] != '\0')
 		{
-			putchar(str[idx]);
-			val += 1;
+			print_char(string[idx]);
+		char_val += 1;
 			idx++;
 		}
 	}
-
-	return (val);
+	print_char('\n');
+	return (char_val);
 }

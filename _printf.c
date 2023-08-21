@@ -1,6 +1,6 @@
 #include "main.h"
 
-int  _printf(const char *format, ...)
+int main _printf(const char *format, ...)
 {
 	unsigned int a = 0, value = 0;
 	va_list aphro;

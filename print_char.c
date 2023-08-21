@@ -1,6 +1,6 @@
 #include "main.h"
 
-int print_char(char q)
+int main print_char(char q)
 {
 	return (write(1, &q, 1));
 }

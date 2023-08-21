@@ -1,6 +1,6 @@
 #include "main.h"
 
-int print_string(char *string)
+int main print_string(char *string)
 {
 	int idx = 0, char_val = 0;
 
