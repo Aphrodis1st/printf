@@ -18,6 +18,27 @@ int main _printf(const char *format, ...)
 			print_char(va_arg(aphro, int));
 			a++;
 		}
+
+		else if (format[a + 1] == 's')
+		{
+			int char_val = print_string(va_arg(aphro, char *));
+
+			a++;
+
+			value += (char_val - 1);
+		}
+
+		else if (format[a + 1] == 's')
+		{
+			print_char('s');
+			a++;
+		}
+
+		else if ((format[a + 1] == 'd') || (format[a + 1] == 'i'))
+		{
+			get_int(va_arg(aphro, int));
+			a++;
+		}
 		value += 1;
 	}
 	return (value);
