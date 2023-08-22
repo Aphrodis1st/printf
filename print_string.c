@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ *
  *  print_string - prints string to stdout
  * @string: list
  * Return: number of char
