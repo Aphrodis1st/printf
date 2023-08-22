@@ -1,33 +1,22 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * get_int - function to print integers
- * @number: list printed
+ * @num: list printed
  * Return: Return count
  */
 
-int get_int(va_list number)
+void get_int(int num)
 {
-	int a, kev = 1, len = 0;
-	unsigned int b;
+	int n;
 
-	a = va_arg(number, int);
+	if (num == 0)
+		return;
 
-	if (a < 0)
-	{
-		len = len + print_char('-');
-		b = a * -1;
-	}
-	else
-		b = a;
-	while (b / expo > 9)
-		kev *= 10;
+	n = num / 10;
 
-	while (kev != 0)
-	{
-		len = len + print_char(b / kev + '0');
-		b = b % kev;
-		kev = kev / 10;
-	}
-	return (len);
+	get_int(n);
+	print_char(num % 10 + '0');
+
+	return;
 }
