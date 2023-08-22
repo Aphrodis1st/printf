@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * print_string - Prints a string
+ * Return: Number of chars printed
+ */
 int print_string(char *string)
 {
 	int idx = 0, char_val = 0;

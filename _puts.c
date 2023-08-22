@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 int _puts(char *string)
 {
 	int idx = 0, char_val = 0;
