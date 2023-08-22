@@ -1,22 +1,32 @@
 #include "main.h"
 
 /**
- * get_int - function to print integers
- * @num: list printed
+ * _int - function to print integers
+ * @integ: list printed
  * Return: Return count
  */
-
-void get_int(int num)
+int _int(va_list integ)
 {
-	int n;
+	int a, expo = 1, len = 0;
+	unsigned int n;
 
-	if (num == 0)
-		return;
+	a = va_arg(integ, int);
 
-	n = num / 10;
+	if (a < 0)
+	{
+		len = len + _putchar('-');
+		n = a * -1;
+	}
+	else
+		n = a;
+	while (n / expo > 9)
+		expo *= 10;
 
-	get_int(n);
-	print_char(num % 10 + '0');
-
-	return;
+	while (expo != 0)
+	{
+		len = len + _putchar(n / expo + '0');
+		n = n % expo;
+		expo = expo / 10;
+	}
+	return (len);
 }

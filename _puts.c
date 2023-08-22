@@ -1,24 +1,19 @@
 #include "main.h"
 
 /**
- * _puts - function to return char
- * @string: list given
- * Return: number of char printed
+ * _strlen - gets string length
+ * @string: string
+ * Return: length (int)
  */
 
-int _puts(char *string)
+int _strlen(char *string)
 {
-	int idx = 0, char_val = 0;
+	int length;
 
-	if (string)
+	length = 0;
+	while (string[length] != '\0')
 	{
-		while (string[idx] != '\0')
-		{
-			print_char(string[idx]);
-		char_val += 1;
-			idx++;
-		}
+		length++;
 	}
-	print_char('\n');
-	return (char_val);
+	return (length);
 }

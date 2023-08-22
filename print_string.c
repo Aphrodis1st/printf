@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
- *
- *  print_string - prints string to stdout
+ * str - prints string to stdout
  * @string: list
  * Return: number of char
  */
-
-int print_string(char *string)
+int str(va_list string)
 {
-	int idx = 0, char_val = 0;
+	int len;
+	char *str;
 
-	if (string)
-	{
-		while (string[idx] != '\0')
-		{
-			print_char(string[idx]);
-			char_val += 1;
-			idx++;
-		}
-	}
-	return (char_val);
+	str = va_arg(string, char *);
+
+	if (str == NULL)
+		str = "(null)";
+	len = 0;
+
+	while (str[len] != '\0')
+		len = len + _putchar(str[len]);
+	return (len);
 }
