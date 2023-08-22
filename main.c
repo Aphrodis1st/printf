@@ -1,44 +1,28 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
 int main(void)
-{
-	int len;
-	int len2;
-	unsigned int ui;
-	void *addr;
 
-	len = _printf("Let's try to printf a simple sentence.\n");
-	len2 = printf("Let's try to printf a simple sentence.\n");
-	ui = (unsigned int)INT_MAX + 1024;
-	addr = (void *)0x7ffe637541f0;
-	_printf("Length:[%d, %i]\n", len, len);
-	printf("Length:[%d, %i]\n", len2, len2);
-	_printf("Negative:[%d]\n", -762534);
-	printf("Negative:[%d]\n", -762534);
-	_printf("Unsigned:[%u]\n", ui);
-	printf("Unsigned:[%u]\n", ui);
-	_printf("Unsigned octal:[%o]\n", ui);
-	printf("Unsigned octal:[%o]\n", ui);
-	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-	_printf("Character:[%c]\n", 'H');
-	printf("Character:[%c]\n", 'H');
-	_printf("String:[%s]\n", "I am a string !");
-	printf("String:[%s]\n", "I am a string !");
-	_printf("Address:[%p]\n", addr);
-	printf("Address:[%p]\n", addr);
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");
-	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);
-	_printf("Unknown:[%r]\n");
-	printf("Unknown:[%r]\n");
+{	
+	int a = 25;
+	char ss = 'A';
+	int value, value1;
+	char *name = "Aphrodis Kavuyo Garrix ten";
+
+	/* using standard printf() functions*/ 
+/*	value1 = printf("Correct!\n %c\n%s your checkers are 100%% green\n %f\n", ss, name, 2.09);
+	printf("Total %d\n", value1);*//*
+	puts("\n----Aka----");*/
+
+	/* my ownprintf called ka_printf */
+
+	value =	_printf("Correct!\n %c\n%s your checkers are 100%% green\n%d\n", ss, name, a);
+	printf("%d\n", value);
+/*	printf("Aphro you finally made it. %d\n", value1);*/
+	/*write(1, name, 15);
+
+	puts("");
+
+	putchar(name[14]);
+	puts("");*/
 	return (0);
 }
