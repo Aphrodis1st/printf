@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ *  print_string - prints string to stdout
+ * @string: list
+ * Return: number of char
+ */
+
 int print_string(char *string)
 {
 	int idx = 0, char_val = 0;
